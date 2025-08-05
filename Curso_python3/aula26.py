@@ -1,0 +1,1 @@
+print(f'O hexadecimal de 1500 é {1500:x}')

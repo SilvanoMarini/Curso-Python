@@ -1,0 +1,6 @@
+SUCESS: O Galaxy S está ligado (Smartphone)
+ERROR: O iPhone está desligado (Smartphone)
+SUCESS: O Galaxy S está ligado (Smartphone)
+ERROR: O iPhone está desligado (Smartphone)
+ERROR: Qualquer coisa (LogFilleMixin)
+SUCESS: Que legal (LogFilleMixin)
