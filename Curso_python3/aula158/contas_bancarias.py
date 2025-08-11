@@ -1,4 +1,5 @@
 from abc import ABC, abstractmethod
+from random import randint
 
 class Conta(ABC):
     def __init__(self, agencia, numero, titular, saldo):
@@ -21,8 +22,10 @@ class Conta(ABC):
 
 
 class ContaCorrente(Conta):
-    def __init__(self, agencia, numero, titular, saldo):
-        super().__init__(agencia, numero, titular, saldo)
+    def __init__(self, agencia, titular, saldo):
+        super().__init__(agencia, titular, saldo)
+        self.numero = a = (''.join(str(randint(0, 9)) for _ in range(5))) + '-' + str(randint(0, 9))
+
         self.limite_especial = 0.0
         self.debito_limite_especial = 0.0
 

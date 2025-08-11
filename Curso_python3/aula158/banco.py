@@ -1,3 +1,5 @@
+from contas_bancarias import ContaCorrente
+from pessoas import Cliente
 
 class Banco():
     def __init__(self):
@@ -14,3 +16,11 @@ class Banco():
         def agencias(self, agencia: int):
             if agencia not in self._agencias:
                 self._agencias.append(agencia)
+
+
+        def adicionar_cliente(self, nome, idade, cpf, renda, agencia, numero, saldo):
+            if agencia not in self._agencias:
+                raise ('Agêcia inválida')
+            
+            cliente = Cliente(nome, idade, cpf, renda)
+            conta  = ContaCorrente(agencia, numero )
