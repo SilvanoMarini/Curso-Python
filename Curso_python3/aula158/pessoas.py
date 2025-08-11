@@ -19,6 +19,10 @@ class Pessoa(ABC):
         return self._idede
 
 
+    @property
+    def cpf(self):
+        return self._cpf
+
 
 class Cliente(Pessoa):
     def __init__(self, nome, idade, cpf, renda):
