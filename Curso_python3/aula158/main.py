@@ -6,7 +6,7 @@ possa sacar/depositar nessa conta. Contas corrente tem um limite extra.
 
 Conta (ABC)
     ContaCorrente
-    ContaPoupanca
+    ContaPoupanca 
 
 Pessoa (ABC)
     Cliente
@@ -44,5 +44,9 @@ if __name__ == "__main__":
     banco.abrir_conta_poupanca("12345678900")
     cliente = banco.buscar_cliente_por_cpf("12345678900")
     contapoupanca = banco.buscar_conta_poupanca_do_cliente(cliente= cliente)
-    contapoupanca.depositar(200)
-    contapoupanca.sacar(100)
+    if contapoupanca:
+        contapoupanca.sacar(100)
+    else:
+        print("Conta não encontrada.")
+
+

@@ -9,10 +9,10 @@ class Conta(ABC):
         self.agencia = agencia
 
     @abstractmethod
-    def sacar(self, valor):
+    def sacar(self, valor: float):
         pass
 
-    def depositar(self, valor):
+    def depositar(self, valor: float) -> None:
         self.saldo += valor
         print(f'✅ Depósito de R${valor:.2f} realizado com sucesso. Novo saldo: R${self.saldo:.2f}')
 
