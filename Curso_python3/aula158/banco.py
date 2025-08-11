@@ -14,7 +14,7 @@ class Banco():
         return self._agencias
 
 
-    def adicionar_cliente(self, nome, idade, cpf, renda, agencia, saldo):
+    def adicionar_cliente(self, nome, idade, cpf, renda, agencia, saldo=0):
         if agencia not in self._agencias:
             raise ValueError('Agêcia inválida')
         
@@ -32,3 +32,11 @@ class Banco():
         self._contas.append(conta)
         self._numero_contas.add(conta.numero)
         self._cpfs.add(cpf)
+
+
+
+BANCO = Banco()
+
+BANCO.adicionar_cliente('Silvano', 22, 44478973857, 0, 1234)
+
+print(BANCO.__dict__)

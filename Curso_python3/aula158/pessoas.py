@@ -26,7 +26,7 @@ class Pessoa(ABC):
 
 class Cliente(Pessoa):
     def __init__(self, nome, idade, cpf, renda):
-        super().__init__(nome, idade, cpf, renda)
+        super().__init__(nome, idade, cpf)
         self.renda = renda
         self._contas = []
 

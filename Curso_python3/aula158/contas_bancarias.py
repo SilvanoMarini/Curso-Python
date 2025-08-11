@@ -2,13 +2,16 @@ from abc import ABC, abstractmethod
 from random import randint
 
 class Conta(ABC):
-    def __init__(self, agencia, numero, titular, saldo):
+    def __init__(self, agencia, titular, saldo):
         super().__init__()
-
-        self.numero = numero
+        self.numero = None
         self.titular = titular
         self.saldo = saldo
         self.agencia = agencia
+
+
+    def adicionar_numero(self):
+        self.numero = ''.join(str(randint(0,9)) for _ in range(5))
 
 
     @abstractmethod
@@ -25,9 +28,7 @@ class Conta(ABC):
 class ContaCorrente(Conta):
     def __init__(self, agencia, titular, saldo):
         super().__init__(agencia, titular, saldo)
-        numero_base = ''.join(str(randint(0, 9)) for _ in range(5))
-
-        self.numero = f'{numero_base}-0'
+        
         self.limite_especial = 0.0
         self.debito_limite_especial = 0.0
 
@@ -86,3 +87,6 @@ class ContaPoupanca(Conta):
         print(f'⚠ Saldo insuficiente para sacar R${valor:.2f}. Saldo atual:'
                f'R${self.saldo:.2f}')
 
+conta1 = ContaCorrente(1234, 'silvano', 0)
+
+print(conta1.__dict__)
