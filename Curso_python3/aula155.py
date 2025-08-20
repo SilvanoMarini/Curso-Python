@@ -30,8 +30,8 @@ class Meta(type):
     def __new__(mcs, name, bases, dct):
         print('METACLASS NEW')
         cls = super().__new__(mcs, name, bases, dct)
-        cls.attr = 1234
-        cls.__repr__ = meu_repr
+        cls.attr = 1234 # type: ignore
+        cls.__repr__ = meu_repr # type: ignore
 
         if 'falar' not in cls.__dict__ or \
                 not callable(cls.__dict__['falar']):

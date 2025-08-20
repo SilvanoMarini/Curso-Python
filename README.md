@@ -17,34 +17,24 @@ Este repositório contém meus arquivos e exercícios do curso de Python, organi
 git clone https://github.com/SilvanoMarini/Curso-Python.git
 Entre na pasta do projeto:
 
-bash
-Copiar
-Editar
+
 cd Curso-Python
 (Opcional) Crie e ative um ambiente virtual Python:
 
-bash
-Copiar
-Editar
+
 python -m venv venv
 source venv/bin/activate  # Linux/Mac
 venv\Scripts\activate     # Windows
 Instale as dependências (se houver):
 
-bash
-Copiar
-Editar
+
 pip install -r requirements.txt
 Execute os scripts que desejar usando o Python:
 
-bash
-Copiar
-Editar
+
 python nome_do_arquivo.py
 Estrutura do repositório
-bash
-Copiar
-Editar
+
 Curso-Python/
 │
 ├── Curso_python3/          # Aulas e módulos do curso

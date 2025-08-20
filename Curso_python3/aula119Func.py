@@ -22,26 +22,7 @@ while True:
 
     comando = comandos.get(resposta) if comandos.get(resposta) is not None else \
         comandos['Adicionar']
-    comando()
+    comando() # type: ignore
     print()
     salvar(tarefas, CAMINHO_ARQUIVO)
-
-    # if resposta == 'listar':
-    #     listar_tarefas(tarefas)
-
-    # elif resposta == 'desfazer':
-    #     desfazer_tarefa(tarefas_desfeitas, tarefas)
-    #     print()
-
-
-    # elif resposta == 'refazer':
-    #     refazer_lista(tarefas, tarefas_desfeitas)
-    #     print()
-
-    # elif resposta == 'sair':
-    #     break
-
-    # else:
-    #     resposta = resposta.capitalize()
-    #     adicionar_tarefa(resposta, tarefas)
 
