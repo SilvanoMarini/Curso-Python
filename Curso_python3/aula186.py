@@ -22,17 +22,17 @@ def criar_arquivos(qtd: int, Dir: Path):
 
 criar_arquivos(10, CAMINHO_ZIP_DIR)
 
-
+# Criando um zip e adicionando arquivos
 with ZipFile(CAMINHO_COMPACTADO, 'w') as zip:
     for root, dirs, files in os.walk(CAMINHO_ZIP_DIR):
         for file in files:
             zip.write(os.path.join(root, file), file)
 
-
+# Lendo arquivos de um zip
 with ZipFile(CAMINHO_COMPACTADO, 'r') as zip:
     for arquivos in zip.namelist():
         print(arquivos)
 
-
+# Extraindo arquivos de um zip
 with ZipFile(CAMINHO_COMPACTADO, 'r') as zip:
     zip.extractall(CAMINHO_DESCOMPACTADO)
