@@ -1,5 +1,143 @@
+# =========================
+# Ambientes virtuais
+# =========================
+.env
+.venv
 venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# =========================
+# Cache e arquivos compilados
+# =========================
 __pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# =========================
+# Jupyter / IPython
+# =========================
 .ipynb_checkpoints/
+profile_default/
+ipython_config.py
+
+# =========================
+# IDEs e editores
+# =========================
 .vscode/
-.ipynb_checkpoints/
+.idea/
+.spyderproject
+.spyproject
+.ropeproject
+
+# =========================
+# Configurações locais / privadas
+# =========================
+__localcode/
+
+# =========================
+# Build, distribuição e empacotamento
+# =========================
+build/
+dist/
+develop-eggs/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+.Python
+
+# =========================
+# PyInstaller
+# =========================
+*.manifest
+*.spec
+
+# =========================
+# Logs
+# =========================
+*.log
+pip-log.txt
+pip-delete-this-directory.txt
+
+# =========================
+# Testes e cobertura
+# =========================
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache/
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+cover/
+
+# =========================
+# Frameworks
+# =========================
+# Django
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Flask
+instance/
+.webassets-cache/
+
+# Scrapy
+.scrapy/
+
+# Celery
+celerybeat-schedule
+celerybeat.pid
+
+# =========================
+# Documentação
+# =========================
+docs/_build/
+site/
+
+# =========================
+# Tipagem e análise estática
+# =========================
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.pyre/
+.pytype/
+
+# =========================
+# PDM / PEP 582
+# =========================
+.pdm.toml
+__pypackages__/
+
+# =========================
+# Internacionalização
+# =========================
+*.mo
+*.pot
+
+# =========================
+# Outros
+# =========================
+*.sage.py
+cython_debug/
