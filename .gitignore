@@ -37,6 +37,7 @@ ipython_config.py
 # Configurações locais / privadas
 # =========================
 __localcode/
+mysql_206
 
 # =========================
 # Build, distribuição e empacotamento
